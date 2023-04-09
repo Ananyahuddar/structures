@@ -1,38 +1,42 @@
-# structures
+# Structure datatype
+# Introduction :
+In C programming, a struct (or structure) is a collection of variables (can be of different types) under a single name. Structures (also called structs) are a way to group several related variables into one place. Each variable in the structure is known as a member of the structure. Unlike an array, a structure can contain many different data types (int, float, char, etc.).
 
-In C, there are cases where we need to store multiple attributes of an entity. It is not necessary that an entity has all the information of one type only. It can have different attributes of different data types. For example, an entity Student may have its name (string), roll number (int), marks (float). To store such type of information regarding an entity student, we have the following approaches:
+# Why is it needed?
+Lets understand this with an example , there is a student variable that may have its name, class, section, etc. So if we want to store all of its information, We can create different variables for every variable like a character array to store name, integer variable to store the class, and a character variable to store the section. But this solution is a little messy, C provides us with a better neat and clean solution, i.e., Structure. Storing data for a single student is easy, but imagine creating that many variables for 50 students or even 500 or more. So to handle this type of problem, we need to create a user-defined data type that can store or bind different types of data types together, this can be done with the help of structure in C.
 
-Construct individual arrays for storing names, roll numbers, and marks.
-Use a special data structure to store the collection of different data types.
+# How to create a structure?
+To create a structure in C, the struct keyword is used followed by the tag name of the structure. Then the body of the structure is defined, in which the required data members (primitive or user-defined data types) are added.
 
-What is Structure
+EXAMPLE
 
-Structure in c is a user-defined data type that enables us to store the collection of different data types. Each element of a structure is called a member. Structures ca; simulate the use of classes and templates as it can store various information
+  struct data 
+  {
+      
+  };
+#How to Declare Structure Variables?
 
-The ,struct keyword is used to define the structure. Let's see the syntax to define the structure in c.
+EXAMPLE
 
-Declaring structure variable
+  struct data
+  {
+      char name[50];
+      char address[50];int age;
+  };
+  ![image](https://user-images.githubusercontent.com/125941580/230759223-e55c640a-0740-4df5-b20b-dc867581b64c.png)
+ #How to Initialize Structure Members?
+ 
+Using Dot '.' operator Using the dot (.) operator, we can access any structure member and then initialize or assign its value according to its data type.
 
-We can declare a variable for the structure so that we can access the member of the structure easily. There are two ways to declare structure variable:
+Syntax:
 
-By struct keyword within main() function
-By declaring a variable at the time of defining the structure.
+ struct structure_name variable_name;
+ variable_name.member = value;
+ 
+#Accessing Structure elements:
 
-Accessing members of the structure
+We can directly access the structure member using the dot(.) operator. The dot operator is used between the structure variable name and the structure member name we want to access. Let’s see the syntax to understand it in a better way.
 
-There are two ways to access structure members:
-
-By . (member or dot operator)
-By -> (structure pointer operator)
-
-Array of Structures in C
-
-An array of structres in C can be defined as the collection of multiple structures variables where each variable contains information about different entities. The array of structures in C are used to store information about multiple entities of different data types. The array of structures is also known as the collection of structures.
-
-Nested Structure in C
-
-C provides us the feature of nesting one structure within another structure by using which, complex data types are created. For example, we may need to store the address of an entity employee in a structure. The attribute address may also have the subparts as street number, city, state, and pin code. Hence, to store the address of the employee, we need to store the address of the employee into a separate structure and nest the structure address into the structure employee.
-
-2) Embedded structure
-3) 
-The embedded structure enables us to declare the structure inside the structure. Hence, it requires less line of codes but it can not be used in multiple data structures.
+ structure_variable.structure_member;
+ 
+ Reference website: https://www.scaler.com/topics/c/structures-c/
