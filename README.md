@@ -24,7 +24,8 @@ EXAMPLE
       char address[50];int age;
   };
   ![image](https://user-images.githubusercontent.com/125941580/230759223-e55c640a-0740-4df5-b20b-dc867581b64c.png)
- #How to Initialize Structure Members?
+  
+ # How to Initialize Structure Members?
  
 Using Dot '.' operator Using the dot (.) operator, we can access any structure member and then initialize or assign its value according to its data type.
 
